@@ -27,9 +27,9 @@ const getJustify = (async (req, res) => {
 
         // console.log(userjustifytext)
         returnedText = (userjustifytext[0].justifytext);
-        // console.log(`returenedtex ${returnedText}`)
-        // totalWords = (userjustifytext[0].justifytext).match(/(\w+)/g).length;
-        // console.log(totalWords);
+        console.log(`returenedtex ${returnedText}`)
+        totalWords = (userjustifytext[0].justifytext).match(/(\w+)/g).length;
+        console.log(totalWords);
 
         res.json({
             message: "List of justify text",
@@ -77,7 +77,7 @@ const addJustify = (async (req, res) => {
 
     }
     catch (error) {
-        // const addjustifytext = await justifyModel.create({ justifytext: addedText })
+        const addjustifytext = await justifyModel.create({ justifytext: addedText })
         res.status(400).json({
             message: "Error while getting text list",
             error

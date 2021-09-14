@@ -15,7 +15,7 @@ const port = 9001;
 
 // mongoose.connect(config.mongoURL, { useNewUrlParser: true }, { useUnifiedTopology: true }, (err) => {
 mongoose.connect("mongodb://localhost:27017/justifytext", { useNewUrlParser: true }, { useUnifiedTopology: true }, (err) => {
-    if (err) {
+    if (err) { 
         console.error(err)
     } else {
         console.log("Connected");
